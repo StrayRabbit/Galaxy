@@ -1,0 +1,59 @@
+﻿using Galaxy.Product.Contracts;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
+using Volo.Abp;
+using Volo.Abp.AspNetCore.Mvc;
+using Volo.Abp.Autofac;
+using Volo.Abp.Http.Client;
+using Volo.Abp.Modularity;
+
+namespace Galaxy.Product.Api
+{
+    [DependsOn(typeof(AbpAspNetCoreMvcModule))]
+    //[DependsOn(typeof(AbpHttpClientModule))]
+    [DependsOn(typeof(AbpAutofacModule), typeof(GalaxyProductModule))]
+    public class GalaxyProductsWebModule : AbpModule
+    {
+        public override void ConfigureServices(ServiceConfigurationContext context)
+        {
+            ////创建动态代理
+            //context.Services.AddHttpClientProxies(typeof(GalaxyProductContractModule).Assembly,
+            //    remoteServiceConfigurationName: "ProductStore");
+
+            //创建 controller action
+            Configure<AbpAspNetCoreMvcOptions>(options =>
+            {
+                options.ConventionalControllers.Create(typeof(GalaxyProductModule).Assembly);
+            });
+
+
+            ConfigureSwaggerServices(context.Services);
+        }
+
+        public override void OnApplicationInitialization(ApplicationInitializationContext context)
+        {
+            var app = context.GetApplicationBuilder();
+            var env = context.GetEnvironment();
+
+            app.UseRouting();
+            app.UseConfiguredEndpoints();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Product API");
+            });
+        }
+
+        private void ConfigureSwaggerServices(IServiceCollection services)
+        {
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo() { Title = "Product API", Version = "v0.1" });
+                options.DocInclusionPredicate((docName, description) => true);
+                options.CustomSchemaIds(type => type.FullName);
+            });
+        }
+    }
+}
