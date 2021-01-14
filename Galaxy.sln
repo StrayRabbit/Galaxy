@@ -5,19 +5,23 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{10F0AF94-4CCA-427C-B745-E1BB047AB782}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.Api", "Galaxy.Api\Galaxy.Api.csproj", "{EEC91F12-5E3E-4D9C-9E7C-E53F87903D74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Galaxy.Api", "Galaxy.Api\Galaxy.Api.csproj", "{EEC91F12-5E3E-4D9C-9E7C-E53F87903D74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.Order.Api", "Galaxy.Order.Api\Galaxy.Order.Api.csproj", "{E3D49356-1902-4F90-B132-0789CF21B709}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Galaxy.Order.Api", "Galaxy.Order.Api\Galaxy.Order.Api.csproj", "{E3D49356-1902-4F90-B132-0789CF21B709}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.Product.Api", "Galaxy.Product.Api\Galaxy.Product.Api.csproj", "{F2D70996-3D7F-482D-8405-2E32A78D8AFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Galaxy.Product.Api", "Galaxy.Product.Api\Galaxy.Product.Api.csproj", "{F2D70996-3D7F-482D-8405-2E32A78D8AFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.Order", "Galaxy.Order\Galaxy.Order.csproj", "{5D0B666C-43AF-4C82-8B7D-873BAB4BEBF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Galaxy.Order", "Galaxy.Order\Galaxy.Order.csproj", "{5D0B666C-43AF-4C82-8B7D-873BAB4BEBF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.Order.Contracts", "Galaxy.Order.Contracts\Galaxy.Order.Contracts.csproj", "{E0E393BF-EF93-44EB-B8D1-72D47BEE5B86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Galaxy.Order.Contracts", "Galaxy.Order.Contracts\Galaxy.Order.Contracts.csproj", "{E0E393BF-EF93-44EB-B8D1-72D47BEE5B86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.Product", "Galaxy.Product\Galaxy.Product.csproj", "{0ABE5036-91AF-49DB-A034-2E4B336AB6DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Galaxy.Product", "Galaxy.Product\Galaxy.Product.csproj", "{0ABE5036-91AF-49DB-A034-2E4B336AB6DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.Product.Contracts", "Galaxy.Product.Contracts\Galaxy.Product.Contracts.csproj", "{35CD38AB-DC96-409A-818A-207E8AA67B18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Galaxy.Product.Contracts", "Galaxy.Product.Contracts\Galaxy.Product.Contracts.csproj", "{35CD38AB-DC96-409A-818A-207E8AA67B18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.User.Contracts", "Galaxy.User.Contracts\Galaxy.User.Contracts.csproj", "{BBEF5C58-0270-402C-AC5C-B85777D9F66A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.User", "Galaxy.User\Galaxy.User.csproj", "{B35EC558-9FA9-44FE-84F0-E4AE305F3C42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,14 @@ Global
 		{35CD38AB-DC96-409A-818A-207E8AA67B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35CD38AB-DC96-409A-818A-207E8AA67B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35CD38AB-DC96-409A-818A-207E8AA67B18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBEF5C58-0270-402C-AC5C-B85777D9F66A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBEF5C58-0270-402C-AC5C-B85777D9F66A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBEF5C58-0270-402C-AC5C-B85777D9F66A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBEF5C58-0270-402C-AC5C-B85777D9F66A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B35EC558-9FA9-44FE-84F0-E4AE305F3C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B35EC558-9FA9-44FE-84F0-E4AE305F3C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B35EC558-9FA9-44FE-84F0-E4AE305F3C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B35EC558-9FA9-44FE-84F0-E4AE305F3C42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

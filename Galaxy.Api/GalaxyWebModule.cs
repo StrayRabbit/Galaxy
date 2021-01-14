@@ -1,5 +1,6 @@
 ﻿using Galaxy.Order;
 using Galaxy.Product;
+using Galaxy.User;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
@@ -12,7 +13,7 @@ namespace Galaxy.Api
 {
     [DependsOn(typeof(AbpAspNetCoreMvcModule))]
     [DependsOn(typeof(AbpAutofacModule))]
-    [DependsOn(typeof(GalaxyOrderModule), typeof(GalaxyProductModule))]
+    [DependsOn(typeof(GalaxyOrderModule), typeof(GalaxyProductModule),typeof(GalaxyUserModule))]
     public class GalaxyWebModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
@@ -21,6 +22,7 @@ namespace Galaxy.Api
                 {
                     options.ConventionalControllers.Create(typeof(GalaxyOrderModule).Assembly);
                     options.ConventionalControllers.Create(typeof(GalaxyProductModule).Assembly);
+                    options.ConventionalControllers.Create(typeof(GalaxyUserModule).Assembly);
                 });
 
             ConfigureSwaggerServices(context.Services);
